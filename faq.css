@@ -1,0 +1,86 @@
+:root{--ink:#111;--line:#cfcfcf}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#fff;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.faq-header{height:82px;display:flex;align-items:center;gap:28px;padding:0 max(4vw,24px);position:sticky;top:0;z-index:30;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.04em;margin-right:auto}
+.brand-logo{width:39px;height:39px;object-fit:cover}
+.brand small{display:block;font-size:.52rem;line-height:1.1;letter-spacing:.12em}
+.back-link,.book-link{font-size:.9rem;font-weight:700}
+.back-link{border-bottom:1px solid}
+.book-link{background:#111;color:#fff;padding:11px 20px}
+.faq-intro{max-width:1260px;margin:auto;padding:58px 32px 38px;display:grid;grid-template-columns:1.25fr .75fr;gap:8%;align-items:end}
+.eyebrow{margin:0 0 14px;font-size:.72rem;font-weight:800;letter-spacing:.22em;color:#666}
+.faq-intro h1{font-size:clamp(2.6rem,5.6vw,5.6rem);line-height:1.02;letter-spacing:-.055em;margin:0}
+.faq-intro>p{margin:0;color:#666}
+.game-section{background:#181818;padding:42px max(3vw,18px) 48px}
+.game-shell{max-width:1260px;margin:auto;background:#0c0f12;border:4px solid #5a5a5a;box-shadow:0 0 0 4px #111,0 18px 50px rgba(0,0,0,.28)}
+.game-layout{display:grid;grid-template-columns:minmax(0,4fr) minmax(255px,1.3fr);align-items:stretch}
+.game-screen{position:relative;overflow:hidden;aspect-ratio:4/3;background:#eee}
+.scene-image{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;transform:translateZ(0)}
+.scanlines{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(to bottom,transparent 0,transparent 3px,rgba(0,0,0,.06) 4px);mix-blend-mode:multiply}
+.screen-flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.game-shell.answering .screen-flash{animation:camera-flash .38s steps(2)}
+.game-shell.answering .scene-image{animation:answer-bob .5s steps(2) 2}
+.sound-toggle{position:absolute;z-index:6;top:14px;right:14px;border:3px solid #111;background:#fff;color:#111;padding:7px 10px;font:800 .74rem/1 "Courier New",monospace;box-shadow:3px 3px 0 #111;cursor:pointer}
+.sound-toggle[aria-pressed="true"]{background:#111;color:#fff;border-color:#fff;box-shadow:3px 3px 0 #fff}
+.question-panel{background:#e5e5e5;border-left:4px solid #111;padding:24px 18px;display:flex;flex-direction:column}
+.question-label{margin:0 0 18px;font:800 .73rem/1.4 "Courier New",monospace;letter-spacing:.12em}
+.question-list{display:grid;gap:11px}
+.question-list button{border:3px solid #111;background:#fff;color:#111;padding:12px 11px;text-align:left;font-weight:800;font-size:clamp(.76rem,1vw,.9rem);line-height:1.35;box-shadow:4px 4px 0 #111;cursor:pointer;transition:transform .12s,background .12s}
+.question-list button:hover,.question-list button:focus-visible,.question-list button.active{transform:translate(-2px,-2px);background:#111;color:#fff;outline:3px solid #fff;outline-offset:1px}
+.question-hint{margin:auto 0 0;padding-top:24px;color:#666;font-size:.74rem;line-height:1.55}
+.dialogue{position:absolute;z-index:7;left:4%;right:4%;bottom:3.5%;min-height:24%;max-height:36%;overflow-y:auto;background:rgba(255,255,255,.96);border:5px solid #111;box-shadow:0 0 0 3px #fff;padding:44px 30px 18px;color:#111}
+.speaker{position:absolute;top:9px;left:18px;background:#111;color:#fff;padding:4px 12px;border:3px solid #fff;font:800 .78rem/1.3 "Courier New",monospace;letter-spacing:.08em}
+.dialogue p{font-size:clamp(.86rem,1.25vw,1.08rem);font-weight:700;line-height:1.62;margin:0;padding-right:20px}
+.dialogue-caret{position:absolute;right:14px;bottom:8px;font-size:.8rem;animation:caret-blink .8s steps(2) infinite}
+.game-help{display:flex;justify-content:space-between;color:#aaa;padding:12px 16px;font:700 .72rem/1.4 "Courier New",monospace;letter-spacing:.08em}
+.faq-cta{max-width:1260px;margin:auto;padding:78px 32px;display:flex;align-items:center;gap:50px;background:#ededed}
+.faq-cta h2{font-size:clamp(2rem,4vw,4rem);line-height:1.12;letter-spacing:-.04em;margin:0}
+.faq-cta p:not(.eyebrow){color:#666;margin:12px 0 0}
+.faq-cta>a{margin-left:auto;background:#111;color:#fff;padding:14px 24px;font-weight:800;white-space:nowrap}
+footer{max-width:1260px;margin:auto;padding:28px 32px;display:flex;justify-content:space-between;color:#777;font-size:.78rem}
+@keyframes camera-flash{0%,100%{opacity:0}
+25%{opacity:.74}
+50%{opacity:.08}
+70%{opacity:.35}
+}
+@keyframes answer-bob{0%,100%{transform:translateY(0)}
+50%{transform:translateY(-3px)}
+}
+@keyframes caret-blink{50%{opacity:.15}
+}
+@media(max-width:800px){.faq-header{height:70px;padding:0 18px}
+.brand span:last-child,.back-link{display:none}
+.brand-logo{width:34px;height:34px}
+.book-link{padding:9px 14px}
+.faq-intro{grid-template-columns:1fr;padding:44px 20px 30px;gap:20px}
+.faq-intro h1{font-size:3.1rem}
+.game-section{padding:24px 14px 34px}
+.game-layout{grid-template-columns:1fr}
+.game-screen{aspect-ratio:4/3}
+.sound-toggle{top:9px;right:9px;font-size:.66rem}
+.dialogue{left:3.5%;right:3.5%;bottom:3%;min-height:33%;max-height:42%;padding:40px 16px 12px;border-width:4px}
+.speaker{top:8px;left:12px;font-size:.65rem}
+.dialogue p{font-size:clamp(.7rem,2.8vw,.9rem);line-height:1.48}
+.question-panel{border-left:0;border-top:4px solid #111;padding:18px 14px 20px}
+.question-label{margin-bottom:12px}
+.question-list{grid-template-columns:1fr 1fr;gap:9px}
+.question-list button{font-size:.78rem;min-height:56px}
+.question-hint{padding-top:16px}
+.game-help{display:none}
+.faq-cta{padding:58px 20px;display:block}
+.faq-cta>a{display:inline-block;margin:26px 0 0}
+footer{padding:24px 20px;display:block}
+footer p{margin:4px 0}
+}
+@media(max-width:430px){.faq-intro h1{font-size:2.55rem}
+.question-list{grid-template-columns:1fr}
+.dialogue p{font-size:.7rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+.game-shell.answering .scene-image,.game-shell.answering .screen-flash,.dialogue-caret{animation:none}
+}
