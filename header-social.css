@@ -1,0 +1,16 @@
+.site-header nav { align-items: center; }
+.header-social { display: flex; align-items: center; gap: 4px; }
+.site-header .header-social a { display: grid; place-items: center; width: 40px; height: 40px; color: #191919; transition: background .15s; }
+.site-header .header-social a::after { display: none; }
+.site-header .header-social a:hover { background: #eee; }
+.site-header .header-social a:focus-visible { outline: 2px solid #191919; outline-offset: 2px; }
+@media (min-width: 901px) and (max-width: 1200px) {
+  .site-header { gap: 18px; padding-left: 24px; padding-right: 24px; }
+  .site-header nav { gap: 15px; white-space: nowrap; }
+  .site-header .header-cta { display: none; }
+}
+@media (max-width: 900px) {
+  .site-header.open nav { align-items: flex-start; }
+  .header-social { gap: 12px; }
+  .site-header .header-social a { width: 44px; height: 44px; }
+}

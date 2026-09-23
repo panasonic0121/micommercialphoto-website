@@ -7,18 +7,26 @@
   <meta name="description" content="台南東區攝影工作室，提供韓式證件照、寶寶證件照、畢業照、全家福、形象照、產品與空間攝影。自然細緻修圖，保留真實的你。">
   <link rel="preconnect" href="https://static.wixstatic.com">
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png?v=2">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=22">
   <link rel="stylesheet" href="marquee.css">
   <link rel="stylesheet" href="monochrome-theme.css">
+  <link rel="stylesheet" href="header-social.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="米商業攝影首頁"><img class="brand-logo" src="images/logo-mark.png" alt="" width="39" height="39"><span>米商業攝影<small>MI COMMERCIAL PHOTO</small></span></a>
     <button class="menu" type="button" aria-label="開啟選單" aria-expanded="false">☰</button>
     <nav aria-label="主要導覽">
-      <a href="#portrait">人像攝影</a><a href="#commercial">商業攝影</a><a href="#process">拍攝流程</a><a href="faq/">常見問題</a><a href="#contact">聯絡資訊</a>
+      <a href="#services">服務項目</a><a href="price/">價格方案</a><a href="photo-size/">證件規格</a><a href="faq/">常見問題</a><a href="#contact">聯絡資訊</a>
+      <div class="header-social" aria-label="社群平台">
+        <a href="https://www.facebook.com/ricephotostudio" target="_blank" rel="noopener noreferrer" aria-label="米商業攝影 Facebook 粉絲團（另開分頁）" title="Facebook">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/micommercialphoto/" target="_blank" rel="noopener noreferrer" aria-label="米商業攝影 Instagram（另開分頁）" title="Instagram">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
     </nav>
-    <a class="header-cta" href="#contact">立即預約</a>
   </header>
 
   <main id="top">
@@ -59,26 +67,46 @@
 
     <section class="services section" id="services">
       <div class="section-head"><div><p class="eyebrow">OUR SERVICES</p><h2>攝影服務</h2></div><p>從個人紀念到品牌商業需求，依不同用途設計拍攝方式與成品。</p></div>
-      <h3 class="category" id="portrait">人像攝影 <span>PORTRAIT</span></h3>
-      <div class="service-grid portraits">
-        <a class="service-card large service-link" href="korean-id-photo/" aria-label="查看韓式證件照作品"><img src="https://static.wixstatic.com/media/da6a0c_20ff0517dbc24284b5ea50c1280333aa~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_88/20250417_edited.jpg" alt="韓式證件照作品"><div><span>01 · 點擊查看作品</span><h3>韓式證件照 <b aria-hidden="true">↗</b></h3><p>自然精緻棚拍與專業修圖</p></div></a>
-        <article class="service-card"><img src="https://static.wixstatic.com/media/da6a0c_958f8d1e872644c5884673fb73d7f6ef~mv2.jpg/v1/fill/w_800,h_900,al_c,q_88/20250207-4_edited.jpg" alt="個人畢業照作品"><div><span>02</span><h3>畢業照</h3><p>學士服與個人畢業紀念</p></div></article>
-        <article class="service-card"><img src="https://static.wixstatic.com/media/da6a0c_13886f7141444a40ab2e8518d1d91525~mv2.jpg/v1/fill/w_800,h_900,al_c,q_88/2026061372469-1.jpg" alt="寶寶證件照作品"><div><span>03</span><h3>寶寶證件照</h3><p>符合規格也保留可愛神情</p></div></article>
-        <article class="service-card"><img src="https://static.wixstatic.com/media/da6a0c_4aee83d5798a4f69b5a3d49c141b5cc8~mv2.jpg/v1/fill/w_800,h_900,al_c,q_88/20250514-2_edited.jpg" alt="情侶朋友寫真作品"><div><span>04</span><h3>情侶・朋友寫真</h3><p>記錄自然互動與默契</p></div></article>
-        <article class="service-card"><img src="https://static.wixstatic.com/media/da6a0c_e6c6b8c8beb84c89bf2822ffbb082bff~mv2.jpg/v1/fill/w_800,h_900,al_c,q_88/20260107_edited.jpg" alt="全家福作品"><div><span>05</span><h3>家庭紀念・全家福</h3><p>留下不同階段的重要畫面</p></div></article>
+      <div class="featured-services">
+        <a class="service-card service-link" id="portrait" href="korean-id-photo/" aria-label="查看韓式證件照作品"><img src="https://static.wixstatic.com/media/da6a0c_20ff0517dbc24284b5ea50c1280333aa~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_88/20250417_edited.jpg" alt="韓式證件照作品"><div><span>01 · 查看作品</span><h3>韓式證件照 <b aria-hidden="true">↗</b></h3><p>自然精緻棚拍與專業修圖</p></div></a>
+        <a class="service-card service-link" href="professional-portrait/" aria-label="查看專業形象照作品"><img class="professional-photo" src="images/professional-portraits/0626-1.webp" alt="專業形象照作品"><div><span>02 · 查看作品</span><h3>專業形象照 <b aria-hidden="true">↗</b></h3><p>讓專業與親和力被清楚看見</p></div></a>
+        <article class="service-card" id="commercial"><img src="https://static.wixstatic.com/media/da6a0c_0603d3b55e7e4c92af5e0aa4b89692a9~mv2.jpg/v1/fill/w_1000,h_750,al_c,q_88/2025092255766.jpg" alt="商業產品攝影作品"><div><span>03</span><h3>商業攝影</h3><p>產品、空間與品牌影像</p></div></article>
       </div>
-
-      <h3 class="category" id="commercial">商業攝影 <span>COMMERCIAL</span></h3>
-      <div class="commercial-grid">
-        <a class="commercial-card-link" href="professional-portrait/" aria-label="查看專業形象照作品"><article><img class="professional-photo" src="images/professional-portraits/0626-1.webp" alt="專業形象照作品"><h3>專業形象照 <span>查看作品 ↗</span></h3><p>讓專業與親和力被清楚看見</p></article></a>
-        <article><img src="https://static.wixstatic.com/media/da6a0c_0603d3b55e7e4c92af5e0aa4b89692a9~mv2.jpg/v1/fill/w_1000,h_750,al_c,q_88/2025092255766.jpg" alt="產品攝影作品"><h3>產品攝影</h3><p>呈現材質、細節與品牌質感</p></article>
-        <article><img src="https://static.wixstatic.com/media/da6a0c_9a3afb0da32a4213b69b5fb2cb0a411e~mv2.jpg/v1/fill/w_1000,h_750,al_c,q_88/0Q4A7633.jpg" alt="空間攝影作品"><h3>空間攝影</h3><p>平衡光線與空間氛圍</p></article>
+      <div class="service-shortcuts" aria-label="其他攝影服務">
+        <p>其他服務</p><span>畢業照</span><span>寶寶證件照</span><span>情侶・朋友寫真</span><span>家庭紀念・全家福</span><span>產品攝影</span><span>空間攝影</span>
       </div>
     </section>
 
     <section class="process section" id="process">
       <div class="section-head"><div><p class="eyebrow">THE PROCESS</p><h2>簡單五步，放心拍攝</h2></div><p>從預約、拍攝到照片輸出，每一步都有人協助。</p></div>
-      <ol><li><b>01</b><h3>線上／電話預約</h3><p>確認拍攝項目，預約方便的日期與時間。</p></li><li><b>02</b><h3>到店整理儀容</h3><p>使用化妝空間，整理頭髮、服裝與儀容。</p></li><li><b>03</b><h3>拍攝與挑選</h3><p>攝影師引導完成拍攝，先從多張照片精選約 12 張，再由你挑選一張最自然、最順眼的照片修圖。</p></li><li><b>04</b><h3>確認修圖結果</h3><p>查看完成照片，如有需要可再提出細節調整。</p></li><li><b>05</b><h3>依規格輸出</h3><p>依照申辦證件所需的照片尺寸與規格完成輸出。</p></li></ol>
+      <ol><li><b>01</b><h3>線上／電話預約</h3><p>確認拍攝項目，預約方便的日期與時間。</p></li><li><b>02</b><h3>到店整理儀容</h3><p>使用化妝空間，整理頭髮、服裝與儀容。</p></li><li><b>03</b><h3>拍攝與挑選</h3><p>攝影師先精選約 12 張，再由你挑選最自然的一張修圖。</p></li><li><b>04</b><h3>確認修圖結果</h3><p>查看完成照片，如有需要可再提出細節調整。</p></li><li><b>05</b><h3>依規格輸出</h3><p>依照申辦證件所需的照片尺寸與規格完成輸出。</p></li></ol>
+    </section>
+
+    <section class="reviews section" id="reviews" aria-labelledby="reviews-title">
+      <div class="reviews-heading">
+        <div><p class="eyebrow">CUSTOMER REVIEWS</p><h2 id="reviews-title">來過的人，<br>這樣說。</h2></div>
+        <p>點選攝影棚裡的人物，看看客人留下的真實拍攝心得。</p>
+      </div>
+      <div class="review-game">
+        <div class="review-scene" role="group" aria-label="點選像素人物切換客人評論">
+          <img src="images/pixel-google-reviews-owner.png" alt="米商業攝影像素風攝影棚，左上角是工作室老闆，場景中有拍攝區、等待區與多位客人">
+          <button class="review-npc npc-1 active" type="button" data-review="0" aria-label="查看翁小姐的評論"></button>
+          <button class="review-npc npc-2" type="button" data-review="1" aria-label="查看 蔡小姐 的評論"></button>
+          <button class="review-npc npc-3" type="button" data-review="2" aria-label="查看林小姐的評論"></button>
+          <button class="review-npc npc-4" type="button" data-review="3" aria-label="查看余小姐的評論"></button>
+          <button class="review-npc npc-5" type="button" data-review="4" aria-label="查看 B小姐 的評論"></button>
+          <button class="review-npc npc-6" type="button" data-review="5" aria-label="查看艾小姐的評論"></button>
+          <button class="review-npc npc-7" type="button" data-review="6" aria-label="查看 S小姐 的評論"></button>
+        </div>
+        <article class="review-dialog" aria-live="polite">
+          <div class="review-avatar" aria-hidden="true">翁</div>
+          <div class="review-copy">
+            <div class="review-meta"><h3>翁小姐</h3><span class="review-stars" aria-label="5 星評價">★★★★★</span></div>
+            <p class="review-text">幾年前在中西區拍護照成果很滿意，推薦我自己的朋友也很滿意，當時印象就很深刻。剛好要換證店家搬來東區，地方更舒適，技術還是一樣好。適合人面對鏡頭的尷尬笑歪都可以修正、當下討論，修片速度真的快又可以當下拿到照片！太喜歡了，一生推～～</p>
+            <div class="review-source"><span>節錄自 Google 公開評論</span><a href="https://maps.app.goo.gl/9o8EW3sFnY1aGqri8" target="_blank" rel="noopener">查看 Google 評論 ↗</a></div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="faq section">
@@ -86,18 +114,17 @@
       <div class="faq-list">
         <details open><summary>不會擺姿勢、面對鏡頭容易緊張怎麼辦？</summary><p>不用事先練習。攝影師會依你的臉型、身形與拍攝目的，引導姿勢、表情與視線。</p></details>
         <details><summary>證件照會修到不像本人嗎？</summary><p>不會。我們保留五官比例與個人特色，主要修整膚況、妝髮、衣服與畫面細節。</p></details>
-        <details><summary>需要提前預約嗎？</summary><p>建議提前預約，才能保留完整拍攝與挑片時間。可先透過 LINE 告知想拍的項目。</p></details>
         <details><summary>可以拿到電子檔嗎？</summary><p>拍攝完畢後，電子檔會寄 e-mail，也可自備隨身碟儲存。</p></details>
       </div>
     </section>
 
     <section class="contact section" id="contact">
       <div class="contact-main"><p class="eyebrow">BOOK A SESSION</p><h2>準備好，留下現在的你了嗎？</h2><p>告訴我們拍攝用途與希望日期，我們會協助你選擇合適方案。</p><div class="actions"><a class="btn light" href="https://lin.ee/QOJqCe8" target="_blank" rel="noopener">LINE 諮詢</a><a class="btn outline-light" href="tel:0931780121">電話預約</a></div></div>
-      <div class="contact-info"><div><small>STUDIO</small><p>臺南市東區中西里<br>東寧路120巷87號</p></div><div><small>CONTACT</small><p><a href="tel:0931780121">0931-780-121</a><br><a href="mailto:panasonic0121@gmail.com">panasonic0121@gmail.com</a></p></div><div><small>OPENING HOURS</small><p>週二至週日<br>10:00–19:00</p></div></div>
+      <div class="contact-info"><div><small>STUDIO</small><p>臺南市東區<br>東寧路120巷87號</p></div><div><small>CONTACT</small><p><a href="tel:0931780121">0931-780-121</a><br><a href="mailto:panasonic0121@gmail.com">panasonic0121@gmail.com</a></p></div><div><small>OPENING HOURS</small><p>週二至週日<br>10:00–19:00</p></div></div>
     </section>
   </main>
 
   <footer><a class="brand footer-brand" href="#top"><img class="brand-logo" src="images/logo-mark.png" alt="" width="39" height="39"><span>米商業攝影<small>MI COMMERCIAL PHOTO</small></span></a><p>© 2026 米商業攝影 · Tainan, Taiwan</p><div><a href="https://www.facebook.com/ricephotostudio" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/micommercialphoto/" target="_blank" rel="noopener">Instagram</a></div></footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=22"></script>
 </body>
 </html>
