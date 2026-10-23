@@ -66,15 +66,15 @@ body,
   background: #ffffff;
   opacity: 0;
   pointer-events: none;
-  animation: studio-flash 5.5s ease-out infinite;
+  animation: studio-flash 10.5s ease-out infinite;
 }
 
 @keyframes studio-flash {
-  0%, 46%, 100% { opacity: 0; }
-  47% { opacity: .42; }
-  48.5% { opacity: .07; }
-  50% { opacity: .22; }
-  52% { opacity: 0; }
+  0%, 78%, 100% { opacity: 0; }
+  79% { opacity: .34; }
+  80% { opacity: .05; }
+  81% { opacity: .16; }
+  83% { opacity: 0; }
 }
 
 .pixel-stage .sun {

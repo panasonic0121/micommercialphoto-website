@@ -1,0 +1,271 @@
+:root{
+  --motion-ease:cubic-bezier(.22,1,.36,1);
+  --motion-fast:220ms;
+  --motion-medium:720ms;
+}
+
+html{scroll-behavior:smooth}
+body{transition:opacity 180ms ease}
+body.page-leaving{opacity:0}
+
+.scroll-progress{
+  position:fixed;
+  z-index:100;
+  top:0;
+  left:0;
+  width:100%;
+  height:2px;
+  pointer-events:none;
+  transform:scaleX(0);
+  transform-origin:left center;
+  background:#161616;
+}
+
+body.motion-enabled .motion-reveal{
+  opacity:0;
+  transform:translate3d(0,24px,0);
+  transition:
+    opacity var(--motion-medium) var(--motion-ease),
+    transform var(--motion-medium) var(--motion-ease);
+  transition-delay:var(--motion-delay,0ms);
+  will-change:opacity,transform;
+}
+
+body.motion-enabled .motion-reveal.motion-visible{
+  opacity:1;
+  transform:translate3d(0,0,0);
+  will-change:auto;
+}
+
+body.motion-enabled .motion-reveal.motion-soft{
+  transform:translate3d(0,14px,0);
+}
+
+body.motion-enabled .motion-reveal.motion-soft.motion-visible{
+  transform:translate3d(0,0,0);
+}
+
+body.motion-enabled .motion-title{
+  clip-path:inset(0 100% 0 0);
+  transition:clip-path 860ms var(--motion-ease);
+}
+
+body.motion-enabled .motion-title.motion-visible{
+  clip-path:inset(0 0 0 0);
+}
+
+.gallery-frame-counter{
+  min-width:108px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border:1px solid #666;
+  color:#cfcfcf;
+  font:700 .7rem/1 "Courier New",monospace;
+  letter-spacing:.12em;
+  transition:color var(--motion-fast) ease,border-color var(--motion-fast) ease;
+}
+
+.gallery-frame-counter.is-changing{
+  color:#fff;
+  border-color:#fff;
+}
+
+.site-header,
+.portfolio-header,
+.faq-header,
+.retouch-header{
+  transition:box-shadow 300ms ease,background-color 300ms ease,transform 500ms var(--motion-ease);
+}
+
+body.has-scrolled .site-header,
+body.has-scrolled .portfolio-header,
+body.has-scrolled .faq-header,
+body.has-scrolled .retouch-header{
+  box-shadow:0 8px 30px rgba(0,0,0,.055);
+}
+
+a,.btn,button,summary{
+  -webkit-tap-highlight-color:transparent;
+}
+
+.btn,
+.header-cta,
+.faq-cta a,
+.info-cta a,
+.portfolio-cta a,
+.button,
+.case-tab{
+  transition:
+    transform var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease;
+}
+
+@media(hover:hover) and (pointer:fine){
+  .btn:hover,
+  .header-cta:hover,
+  .faq-cta a:hover,
+  .info-cta a:hover,
+  .portfolio-cta a:hover,
+  .button:hover,
+  .case-tab:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+  }
+
+  .service-card img,
+  .gallery-card img,
+  .detail-image img{
+    transition:transform 900ms var(--motion-ease),filter 400ms ease;
+  }
+
+  .service-card:hover img,
+  .gallery-card:hover img{
+    transform:scale(1.018);
+  }
+
+  .text-link,
+  .site-header nav>a,
+  .portfolio-header nav>a{
+    transition:opacity var(--motion-fast) ease;
+  }
+
+  .text-link:hover,
+  .site-header nav>a:hover,
+  .portfolio-header nav>a:hover{
+    opacity:.62;
+  }
+}
+
+.service-card,
+.info-card,
+.spec-row,
+.boundary-grid article,
+.review-game,
+.faq-game,
+.comparison,
+.gallery-card{
+  transition:transform 500ms var(--motion-ease),box-shadow 500ms ease;
+}
+
+@media(hover:hover) and (pointer:fine){
+  .info-card:hover,
+  .spec-row:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 45px rgba(0,0,0,.07);
+  }
+}
+
+.gallery-viewport{
+  scroll-behavior:smooth;
+}
+
+.gallery-card{
+  transition:opacity 380ms ease,transform 580ms var(--motion-ease);
+}
+
+.case-panel:not([hidden]){
+  animation:caseEnter 520ms var(--motion-ease) both;
+}
+
+@keyframes caseEnter{
+  from{opacity:0;transform:translateY(12px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.dialog-refresh{
+  animation:dialogRefresh 420ms var(--motion-ease) both;
+}
+
+.owner-idle{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:url("images/faq/studio-boss.webp?v=2") center/cover no-repeat;
+  clip-path:polygon(40% 23%,59% 23%,61% 55%,39% 55%);
+  opacity:0;
+  filter:brightness(1.045);
+  animation:ownerIdle 8s steps(2,end) infinite;
+}
+
+@keyframes ownerIdle{
+  0%,72%,76%,100%{opacity:0;transform:translateY(0)}
+  73%,75%{opacity:.7;transform:translateY(-1px)}
+}
+
+@keyframes dialogRefresh{
+  0%{opacity:.25;transform:translateY(5px)}
+  100%{opacity:1;transform:translateY(0)}
+}
+
+.comparison-divider{
+  transition:left 70ms linear;
+}
+
+.comparison-divider span{
+  transition:transform var(--motion-fast) var(--motion-ease),box-shadow var(--motion-fast) ease;
+}
+
+.comparison:hover .comparison-divider span{
+  transform:translate(-50%,-50%) scale(1.06);
+  box-shadow:0 7px 22px rgba(0,0,0,.27);
+}
+
+.review-scene,
+.game-screen{
+  transform:translateZ(0);
+}
+
+.review-scene:after,
+.game-screen:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(110deg,transparent 36%,rgba(255,255,255,.12) 49%,transparent 62%);
+  transform:translateX(-130%);
+  animation:studioGlint 9s ease-in-out infinite;
+}
+
+@keyframes studioGlint{
+  0%,70%{transform:translateX(-130%)}
+  88%,100%{transform:translateX(130%)}
+}
+
+@media(max-width:900px){
+  body.motion-enabled .motion-reveal{
+    transform:translate3d(0,16px,0);
+    transition-duration:580ms;
+  }
+  .scroll-progress{height:1px}
+  .gallery-frame-counter{height:44px;min-width:96px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  body{transition:none}
+  .scroll-progress{display:none}
+  body.motion-enabled .motion-reveal,
+  body.motion-enabled .motion-reveal.motion-visible{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+  .case-panel:not([hidden]),
+  .dialog-refresh,
+  .owner-idle,
+  .review-scene:after,
+  .game-screen:after{
+    animation:none;
+  }
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+  }
+}
