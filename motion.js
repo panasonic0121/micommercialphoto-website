@@ -12,9 +12,11 @@
     '.process li','.faq>div','.faq details','.review-game','.contact>div',
     '.info-hero>div','.info-card','.spec-row','.notice','.info-cta',
     '.portfolio-hero>div','.gallery-card','.portfolio-cta>div','.portfolio-cta>a',
+    '.package-heading','.package-content li','.package-actions a',
     '.faq-intro>div','.faq-game','.faq-cta>div','.faq-cta>a',
     '.retouch-intro>div','.comparison-section .section-heading','.case-tabs',
-    '.comparison-layout','.boundary-section .section-heading','.boundary-grid article',
+    '.comparison-layout','.makeup-detail .section-heading','.makeup-frame','.makeup-items>div',
+    '.boundary-section .section-heading','.boundary-grid article',
     '.retouch-faq .section-heading','.retouch-faq details','.retouch-cta>div','.retouch-cta>a'
   ];
 
